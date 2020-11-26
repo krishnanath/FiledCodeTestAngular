@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### This project is a Angular Code Challenge conducted by Filed.com
 
-####  [Live project URL](https://krishnanath.io/FiledCodeTestAngular/https://krishnanath.github.io/FiledCodeTestAngular/make-payment) 
+####  [Live project URL](https://krishnanath.github.io/FiledCodeTestAngular/make-payment) 
 
 #### Code Challenge description 
 
