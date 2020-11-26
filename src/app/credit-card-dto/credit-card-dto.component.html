@@ -1,0 +1,18 @@
+<br /><br />
+<div>
+  <!-- [chipImgPath]="'http://alfoart.com/images/golden_credit_card/chip.png'"  -->
+  <ngx-interactive-paycard
+    [chipImgPath]="'./assets/cardimg/chip.png'"
+    [logoImgPath]="
+      'https://media-exp1.licdn.com/dms/image/C4D0BAQEO3nKaxA2CQg/company-logo_200_200/0/1571242418823?e=1614211200&v=beta&t=PTboPPzW3LSpi_EtH5WlWQ4peKiI00HSRHwfNW6YXN0'
+    "
+    [frontBgImgPath]="'./assets/cardimg/22.jpeg'"
+    [backBgImgPath]="'./assets/cardimg/22.jpeg'"
+    [cardNumberFormat]="cardNumberFormat"
+    [cardNumberMask]="cardNumberMask"
+    [cardLabels]="cardLabel"
+    [formLabels]="formLabel"
+    (submitEvent)="onSubmitEvent($event)"
+  >
+  </ngx-interactive-paycard>
+</div>

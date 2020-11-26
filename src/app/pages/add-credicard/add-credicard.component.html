@@ -1,0 +1,185 @@
+<main class="page  payment-page">
+  <section class="payment-form dark">
+    <div class="container">
+      <div class="block-heading">
+        <!-- <h2>Payment</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p> -->
+      </div>
+      <form [formGroup]="creditcardValidation">
+        <div class="card-details">
+          <h3 class="title">Credit Card Details</h3>
+          <div class="row">
+            <div
+              [ngClass]="{
+                showerror:
+                  creditcardValidation.get('name').errors &&
+                  creditcardValidation.get('name').touched
+              }"
+              class="form-group col-sm-7"
+            >
+              <label for="card-holder">Card Holder Name</label>
+              <input
+                id="card-holder"
+                #cardHolderName
+                type="text"
+                class="form-control"
+                formControlName="name"
+                placeholder="Card holder name"
+                aria-label="Card Holder"
+                aria-describedby="basic-addon1"
+              />
+              <span class="error-message" *ngIf="  creditcardValidation.get('name').errors &&
+              creditcardValidation.get('name').touched">
+                Please provide your Full Name
+              </span>
+             
+            </div>
+
+            <div
+              [ngClass]="{
+                showerror:
+                  creditcardValidation.get('expire').errors &&
+                  creditcardValidation.get('expire').touched
+              }"
+              class="form-group col-sm-5"
+            >
+              <label for="">Enter Expiration Date</label>
+              <div class="input-group expiration-date">
+                <input
+                  type="month"
+                  min="2020-11"
+                  max="2040-12"
+                  #expirationDate
+                  class="form-control"
+                  formControlName="expire"
+                  placeholder="MM"
+                  aria-label="MM"
+                  aria-describedby="basic-addon1"
+                />
+               
+            
+             
+              </div>
+              <span class="error-message" *ngIf="  creditcardValidation.get('expire').errors &&
+              creditcardValidation.get('expire').touched">
+                Card expire date
+              </span>
+            </div>
+
+            <div
+              [ngClass]="{
+                showerror:
+                  creditcardValidation.get('cardnumber').errors &&
+                  creditcardValidation.get('cardnumber').touched
+              }"
+              class="form-group col-sm-8"
+            >
+              <label for="card-number">Card Number</label>
+              <input
+                id="card-number"
+                #cardNumber
+                maxlength="20"
+                type="text"
+                class="form-control"
+                formControlName="cardnumber"
+                placeholder="Card Number"
+                aria-label="Card Holder"
+                aria-describedby="basic-addon1"
+                [cleave]="{ creditCard: true}"
+              />
+              <span class="error-message" *ngIf="  creditcardValidation.get('cardnumber').errors &&
+              creditcardValidation.get('cardnumber').touched">
+               
+                 Please enter valid card number
+        
+              </span>
+            
+            </div>
+            <div
+              [ngClass]="{
+                showerror:
+                  creditcardValidation.get('cvv').errors &&
+                  creditcardValidation.get('cvv').touched
+              }"
+              class="form-group col-sm-4"
+            >
+              <label for="cvc">CVC</label>
+              <input
+                id="cvc"
+                maxlength="4"
+                type="text"
+
+                min="100"
+                max="999"
+                maxlength="3"
+                #cvv
+                class="form-control"
+                placeholder="CVV"
+                formControlName="cvv"
+                aria-label="Card Holder"
+                aria-describedby="basic-addon1"
+              />
+
+              <span class="error-message" *ngIf="  creditcardValidation.get('cvv').errors &&
+              creditcardValidation.get('cvv').touched">
+               
+                  please enter cvc/cvv code
+        
+              </span>
+            </div>
+            <div
+              [ngClass]="{
+                showerror:
+                  creditcardValidation.get('amount').errors &&
+                  creditcardValidation.get('amount').touched
+              }"
+              class="form-group col-sm-12"
+            >
+              <label for="card-holder">Enter Amount</label>
+              <input
+                id="card-holder"
+                maxlength="10"
+                #totalAmount
+                type="text"
+                class="form-control amount"
+                formControlName="amount"
+                placeholder="Total Amount"
+                aria-label="Card Holder"
+                aria-describedby="basic-addon1"
+                [cleave]="{
+                  numeral: true,
+                  numeralThousandsGroupStyle: 'thousand'
+                }"
+              />
+              <span class="error-message" *ngIf="  creditcardValidation.get('amount').errors &&
+              creditcardValidation.get('amount').touched">
+               
+                  please enter total payment Amount
+        
+              </span>
+            </div>
+            <div class="form-group col-sm-12">
+             <button
+                [disabled]="creditcardValidation.invalid"
+                (click)="
+                  addCreditcard(
+                    cardNumber.value,
+                    cardHolderName.value,
+                    expirationDate.value,
+                    totalAmount.value,
+                    cvv.value
+                  )
+                "
+                type="button"
+                class="btn btn-primary btn-block"
+              >
+                Proceed
+              </button>  
+            
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

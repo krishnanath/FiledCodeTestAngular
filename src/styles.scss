@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+ body{
+     margin: 0;
+     padding: 0;
+ }
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('./assets/fonts/Gotham-Font/GothamBold.ttf');
+}
+
+@font-face {
+    font-family:'seganlight' ;
+    src: url('./assets/fonts/segan/Segan-Light.ttf');
+}
+
+// .left, .right {
+//     float:left;
+//     width: calc(50% - 6em);
+//     padding: 3em;
+// }
+
+h1, h2 ,h3, h4, h5,h6{
+    font-family: 'GothamBold' !important;
+    color: #595957;
+}
+p, span,::placeholder, input, label, th ,td {
+font-family: 'seganlight' !important;
+}
+
+// input[type="text"] {
+//     width: 100%;
+//     padding: 5px;
+//     margin-bottom: 10px;
+// }
+
+.card-form__button{
+    background: #38ccf6 !important;
+}
+
+.toast-success {
+    background-color: #38ccf6 !important;
+    color: #fff;
+  }

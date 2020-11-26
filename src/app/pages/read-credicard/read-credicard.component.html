@@ -1,0 +1,26 @@
+<div class="container">
+  <h3>Credit Card Informations From NgRx Store</h3>
+
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Card Holder Name</th>
+        <th>Card Number</th>
+        <th>Valid Thru</th>
+        <th>CVV</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let card of creditcard | async">
+        <td>{{ card.cardHolderName }}</td>
+        <td>{{ card.cardNumber }}</td>
+        <td>{{ card.expirationDate }}</td>
+        <td>{{ card.cvv }}</td>
+        <td>£ {{ card.totalAmount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="pad-btm"></div>
+<div class="container"><hr /></div>
