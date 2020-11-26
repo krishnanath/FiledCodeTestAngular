@@ -30,7 +30,6 @@
             "styles": [
               "src/styles.scss",
               "node_modules/ngx-toastr/toastr.css"
-
             ],
             "scripts": []
           },
@@ -123,6 +122,15 @@
             "production": {
               "devServerTarget": "FiledAngularTest:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref":"https://krishnanath.github.io/FiledCodeTestAngular/",
+            "repo": "https://github.com/krishnanath/FiledCodeTestAngular",
+            "name":"Krishnanath",
+            "email":"malykrishna@gmail.com"
           }
         }
       }

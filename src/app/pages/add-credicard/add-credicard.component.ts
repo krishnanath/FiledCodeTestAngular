@@ -28,7 +28,7 @@ export class AddCredicardComponent implements OnInit {
   
 
   showSuccess(){
-    this.toaster.success('Thank You for your Credit Card Payment');
+    this.toaster.success('Thank You, Your Payment Information has been stored with Ngrx');
   }
 
   
@@ -44,7 +44,7 @@ export class AddCredicardComponent implements OnInit {
       })
     );
 
-    // this.showSuccess();
+  this.showSuccess();
     
 
     this.creditcardValidation.reset();
