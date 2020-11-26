@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### This project is a Angular Code Challenge conducted by Filed.com
 
+####  [Live project URL](https://krishnanath.io/FiledCodeTestAngular/https://krishnanath.github.io/FiledCodeTestAngular/make-payment) 
+
 #### Code Challenge description 
 
 
@@ -22,4 +24,18 @@ e. Amount (mandatory, number, > 0)
 
  5. In the app.component.html, create a button (name it any way you like) and use the          Angular router to navigate to the new page created at the previous point.
 6. To make sure that our state management solution is working, get the data from the store     and display it on the app.component.html.
+
+
+### Additional Dependencies / Libraries
+
+1) Ngrx Store (for managing global state management across an entire application)
+
+2) @ngrx/store-devtools (for debugging in console)
+
+3) Ngx-Toaster (for push notfication)
+
+4) ngx-cleave-directive (input formatter)
+
+
+
  
